@@ -1,0 +1,49 @@
+:root {
+  --mainColor: rgb(11, 57, 84);
+  --secondaryColor: rgb(11, 57, 84);
+}
+
+body {
+  background-color: var(--mainColor);
+}
+
+.hoverwrap img {
+  height: 20rem;
+  width: auto;
+  border-radius: 5px;
+}
+
+.hoverwrap {
+  position: relative;
+  width: fit-content;
+  padding: 0;
+  height: 20rem;
+}
+
+.hovercap {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+}
+
+.hovercap {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.hoverwrap:hover .hovercap {
+  opacity: 1;
+}
+
+/*utility classes*/
+.container {
+  margin: 2rem;
+  padding: 2rem;
+}
