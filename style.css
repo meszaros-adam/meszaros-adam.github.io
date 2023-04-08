@@ -1,16 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* CSS reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS reset */
+
 :root {
-  --mainColor: rgb(11, 57, 84);
-  --secondaryColor: rgb(11, 57, 84);
+  --mainColor: #0B2447;
+  --secondaryColor: #A5D7E8;
+  font-family: 'Orbitron', sans-serif;
+
 }
 
 body {
   background-color: var(--mainColor);
+  color: var(--secondaryColor)
 }
 
 .hoverwrap img {
   height: 20rem;
   width: auto;
   border-radius: 5px;
+  border: black dashed 5px;
 }
 
 .hoverwrap {
@@ -18,12 +34,13 @@ body {
   width: fit-content;
   padding: 0;
   height: 20rem;
+  overflow: hidden;
+  margin-bottom: 3rem;
 }
 
-.hovercap {
-  box-sizing: border-box;
+.hoverwrap .hovercap {
   position: absolute;
-  bottom: 0;
+  bottom: -100%;
   left: 0;
   width: 100%;
   padding: 10px;
@@ -31,19 +48,83 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 0 0 5px 5px;
   text-align: center;
-}
-
-.hovercap {
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: all ease-in-out 0.5s;
 }
 
 .hoverwrap:hover .hovercap {
   opacity: 1;
+  bottom: 0;
 }
+
+header h1 {
+  text-align: center;
+  font-size: 50px;
+
+}
+
+.school {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background-color: #19376D;
+}
+
+.school:hover {
+  transform: scale(1.1);
+  transition: all ease-in-out 0.3s;
+  box-shadow: 10px 10px;
+}
+
+.personal-data-list li {
+  margin-bottom: 1rem;
+}
+
+.personal-data {
+  border-bottom: black dashed 5px;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+.container .studies {
+  display: flex;
+}
+
+.studies {
+  display: flex;
+  justify-content: center;
+}
+
+.schools {
+  list-style: none;
+}
+
+.technologies {
+  background-color: var(--secondaryColor);
+  color: black;
+}
+
+/* Media Queries */
+@media screen and (max-width: 750px) {
+  .personal-data .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Media Queries */
+
+
 
 /*utility classes*/
 .container {
-  margin: 2rem;
-  padding: 2rem;
+  padding: 3rem;
 }
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*utility classes*/
