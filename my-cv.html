@@ -14,27 +14,29 @@
         <h1>Mészáros Ádám CV</h1>
     </header>
     <section class="container personal-data">
-        <div class="flex">
+        <div class="flex justify-evenly">
             <figure class="hoverwrap">
                 <img src="/images/profile_pic.jpg" alt="">
                 <figcaption class="hovercap">Mészáros Ádám</figcaption>
             </figure>
             <div>
-                <h2>Személyes Adatok:</h2>
+                <h1>Személyes Adatok:</h1>
                 <ul class="personal-data-list">
                     <li>Születési Dátum: 1997.12.19</li>
                     <li>Születési Hely: Sopron</li>
                     <li>Email Cím: meszarosadam@outlook.hu</li>
                     <li>Telefon: +36309234293</li>
+                    <li>Github: <a href="https://github.com/meszaros-adam" target="_blank">github.com/meszaros-adam</a>
+                    </li>
                 </ul>
             </div>
 
         </div>
 
     </section>
-    <section class="container studies">
+    <section class="container studies flex justify-center">
         <div>
-            <h2>Tanulmányaim:</h2>
+            <h1>Tanulmányaim:</h1>
             <ul class="schools">
                 <li class="school">
                     <div>
@@ -44,19 +46,48 @@
                 </li>
                 <li class="school">
                     <div>
-                        Gazdaságinformatikus, Soproni Egyetem </div>
+                        Gazdaságinformatikus, Soproni Egyetem</div>
                     <div> 2018-2021</div>
                 </li>
             </ul>
         </div>
     </section>
     <section class="container technologies">
-        <h2>Technológiák:</h2>
-        <ul>
-            <li>Laravel</li>
-            <li>Vue.js</li>
-        </ul>
+        <div class="flex justify-evenly">
+            <h1>Technológiák:</h1>
+            <ul>
+                <li>HTML, CSS</li>
+                <li>Laravel</li>
+                <li>Vue.js</li>
+            </ul>
+        </div>
+        <div class="flex logos justify-evenly">
+            <a href="https://html.spec.whatwg.org/multipage/" title="HTML Standard" target="_blank"> <img
+                    src="/images/HTML5_logo.svg.png" alt="Kép betöltése sikertelen!"></a>
+            <a href="https://www.w3.org/Style/CSS/Overview.en.html" title="Cascading Style Sheets" target="_blank"><img
+                    src="/images/CSS3_logo.svg.png" alt="Kép betöltése sikertelen!"></a>
+            <a href="https://laravel.com" target="_blank" title="Laravel - The PHP Framework for Web Artisans"> <img
+                    src="/images/laravel-logo.svg.png" alt="Kép betöltése sikertelen!"></a>
+            <a href="https://vuejs.org" title="Vue.js - The Progressive JavaScript Framework" target="_blank"> <img
+                    src="/images/Vuejs-logo.png" alt="Kép betöltése sikertelen!"></a>
+        </div>
+        </div>
     </section>
+    <section class="container my-projects flex justify-center">
+        <div> 
+            <h1>Projektjeim:</h1>
+            <div class="flex flex-column">
+                <a href="https://github.com/meszaros-adam/onlab" target="_blank">Eseménynaptár (Szakdolgozatom)</a>
+                <a href="https://github.com/meszaros-adam/gyakorikerdesek-clone" target="_blank">Gyakorkérdések klón</a>
+                <a href="https://github.com/meszaros-adam/restaurant-site" target="_blank">Étterem weboldal</a>
+                <a href="https://github.com/meszaros-adam/probafeladat" target="_blank">Állásinterjú próbafeladat</a>
+            </div>
+        </div>
+    </section>
+    <footer class="flex justify-center">
+        <div>Mészáros Ádám 2023</div>
+    </footer>
+
 </body>
 
 </html>
