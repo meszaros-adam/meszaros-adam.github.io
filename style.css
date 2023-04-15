@@ -64,6 +64,7 @@ header {
 header h1 {
   text-align: center;
   font-size: 50px;
+  animation: fade 2s;
 
 }
 
@@ -166,13 +167,30 @@ footer {
 
 /* Media Queries */
 @media screen and (max-width: 750px) {
-  .personal-data .flex, .technologies .flex{
+
+  .personal-data .flex,
+  .technologies .flex {
     flex-direction: column;
     align-items: center;
   }
 }
 
 /* Media Queries */
+
+/* Animations */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animations */
 
 /*utility classes*/
 .container {
