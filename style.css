@@ -166,7 +166,7 @@ footer {
 
 /* Media Queries */
 @media screen and (max-width: 750px) {
-  .personal-data .flex {
+  .personal-data .flex, .technologies .flex{
     flex-direction: column;
     align-items: center;
   }
