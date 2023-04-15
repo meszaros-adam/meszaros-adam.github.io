@@ -62,19 +62,19 @@
             </ul>
         </div>
         <div class="flex logos justify-evenly">
-            <a href="https://html.spec.whatwg.org/multipage/" title="HTML Standard" target="_blank"> <img
+            <a href="https://html.spec.whatwg.org/multipage/" title="HTML Standard" target="_blank"> <img class="logo"
                     src="/images/HTML5_logo.svg.png" alt="Kép betöltése sikertelen!"></a>
             <a href="https://www.w3.org/Style/CSS/Overview.en.html" title="Cascading Style Sheets" target="_blank"><img
-                    src="/images/CSS3_logo.svg.png" alt="Kép betöltése sikertelen!"></a>
+                    class="logo" src="/images/CSS3_logo.svg.png" alt="Kép betöltése sikertelen!"></a>
             <a href="https://laravel.com" target="_blank" title="Laravel - The PHP Framework for Web Artisans"> <img
-                    src="/images/laravel-logo.svg.png" alt="Kép betöltése sikertelen!"></a>
+                    class="logo" src="/images/laravel-logo.svg.png" alt="Kép betöltése sikertelen!"></a>
             <a href="https://vuejs.org" title="Vue.js - The Progressive JavaScript Framework" target="_blank"> <img
-                    src="/images/Vuejs-logo.png" alt="Kép betöltése sikertelen!"></a>
+                    class="logo" src="/images/Vuejs-logo.png" alt="Kép betöltése sikertelen!"></a>
         </div>
         </div>
     </section>
     <section class="container my-projects flex justify-center">
-        <div> 
+        <div>
             <h1>Projektjeim:</h1>
             <div class="flex flex-column">
                 <a href="https://github.com/meszaros-adam/onlab" target="_blank">Eseménynaptár (Szakdolgozatom)</a>
@@ -85,9 +85,34 @@
         </div>
     </section>
     <footer class="flex justify-center">
-        <div>Mészáros Ádám 2023</div>
+        <div>Mészáros Ádám &copy 2023</div>
     </footer>
-
 </body>
 
 </html>
+
+<script>
+
+    const logos = document.querySelectorAll('.logo')
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('scroll-animation')
+            }
+            else {
+                entry.target.classList.remove('scroll-animation')
+            }
+
+        })
+    }, {
+        threshold: 1
+    });
+
+    for (let i = 0; i < logos.length; i++) {
+        const elements = logos[i];
+
+        observer.observe(elements);
+    }
+
+</script>
