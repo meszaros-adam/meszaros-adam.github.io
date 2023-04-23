@@ -162,7 +162,7 @@ h1 {
 footer {
   background-color: black;
   color: var(--lightBlue);
-  padding: 3px;
+  padding: 0.5rem;
 }
 
 .technologies p{
