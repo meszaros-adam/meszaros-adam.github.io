@@ -9,6 +9,10 @@
 
 /* CSS reset */
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --mainColor: #0B2447;
   --secondaryColor: #19376D;
@@ -165,8 +169,31 @@ footer {
   padding: 0.5rem;
 }
 
-.technologies p{
+.technologies p {
   margin: 3rem;
+}
+
+.up-arrow {
+  position: fixed;
+  height: 60px;
+  bottom: 50px;
+  right: -100px;
+  background-color: var(--lightBlue);
+  padding: 5px;
+  border-radius: 5px;
+  transition: all ease-in-out 0.5s;
+}
+
+.up-arrow.visible {
+  right: 50px;
+}
+
+.up-arrow img {
+  height: 50px;
+}
+
+button{
+  cursor: pointer;
 }
 
 /* Media Queries */

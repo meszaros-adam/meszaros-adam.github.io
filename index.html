@@ -100,12 +100,16 @@
     <footer class="flex justify-center">
         <div>Mészáros Ádám &copy 2023</div>
     </footer>
+    <button onclick="scrollUp()" class="up-arrow" id="up-arrow">
+        <img src="/images/up-arrow-icon.svg" alt="">
+    </button>
 </body>
 
 </html>
 
 <script>
 
+    //logos
     const logos = document.querySelectorAll('.logo')
 
     const observer = new IntersectionObserver((entries) => {
@@ -128,4 +132,24 @@
         observer.observe(elements);
     }
 
+    //up-arrow
+
+    const upArrow = document.getElementById("up-arrow");
+
+    const scrollFunc = () => {
+        const y = window.scrollY
+
+        if (y > 600) {
+            upArrow.className = "up-arrow visible"
+        }
+        else {
+            upArrow.className = "up-arrow"
+        }
+    }
+
+    window.addEventListener("scroll", scrollFunc)
+
+    const scrollUp = () => {
+        window.scrollTo(0, 0);
+    }
 </script>
