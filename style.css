@@ -114,6 +114,11 @@ h1 {
   color: black;
 }
 
+.technologies p {
+  margin: 3rem;
+  width: 60%;
+}
+
 .logos {
   margin-top: 10rem;
   margin-bottom: 5rem;
@@ -169,14 +174,12 @@ footer {
   padding: 0.5rem;
 }
 
-.technologies p {
-  margin: 3rem;
-}
+
 
 .up-arrow {
   position: fixed;
   height: 60px;
-  bottom: 50px;
+  bottom: 30px;
   right: -100px;
   background-color: var(--lightBlue);
   padding: 5px;
@@ -185,14 +188,14 @@ footer {
 }
 
 .up-arrow.visible {
-  right: 50px;
+  right: 30px;
 }
 
 .up-arrow img {
   height: 50px;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
@@ -203,6 +206,15 @@ button{
   .technologies .flex {
     flex-direction: column;
     align-items: center;
+  }
+
+  .technologies p {
+    margin: 3rem 0 3rem 0;
+    width: 100%;
+  }
+
+  .logos a {
+    margin: 1rem 0 1rem 0;
   }
 }
 
