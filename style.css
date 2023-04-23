@@ -174,16 +174,15 @@ footer {
   padding: 0.5rem;
 }
 
-
-
 .up-arrow {
   position: fixed;
-  height: 60px;
+  height: 50px;
+  width: 50px;
   bottom: 30px;
   right: -100px;
   background-color: var(--lightBlue);
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 25px;
   transition: all ease-in-out 0.5s;
 }
 
@@ -192,11 +191,13 @@ footer {
 }
 
 .up-arrow img {
-  height: 50px;
+  height: 30px;
 }
 
 button {
   cursor: pointer;
+  border-style: solid;
+  border-color: black;
 }
 
 /* Media Queries */
