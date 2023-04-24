@@ -194,10 +194,15 @@ footer {
   height: 30px;
 }
 
-button {
+.up-arrow {
   cursor: pointer;
   border-style: solid;
   border-color: black;
+}
+
+.up-arrow:hover{
+  border-color: var(--lightBlue);
+  background-color: var(--secondaryColor);
 }
 
 /* Media Queries */
