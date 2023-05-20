@@ -67,8 +67,14 @@ header {
 
 header h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 70px;
+  font-weight: 950;
   animation: fade 2s;
+  background: linear-gradient(110deg, #00FFFF 33%, #ffed4b 60%);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 
 }
 
@@ -112,6 +118,19 @@ h1 {
 .technologies {
   background-color: var(--lightBlue);
   color: black;
+
+}
+
+.technologies .list {
+  grid-area: list;
+}
+
+.technologies .logos {
+  grid-area: logos;
+}
+
+.technologies .text {
+  grid-area: text;
 }
 
 .technologies p {
@@ -120,8 +139,7 @@ h1 {
 }
 
 .logos {
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+  margin: 3rem 0 3rem 0;
 }
 
 .technologies li {
@@ -200,7 +218,7 @@ footer {
   border-color: black;
 }
 
-.up-arrow:hover{
+.up-arrow:hover {
   border-color: var(--lightBlue);
   background-color: var(--secondaryColor);
 }
@@ -221,6 +239,17 @@ footer {
 
   .logos a {
     margin: 1rem 0 1rem 0;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .technologies {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      "text text list"
+      "text text list"
+      "logos logos logos";
   }
 }
 
@@ -251,11 +280,19 @@ footer {
   flex-wrap: wrap;
 }
 
-.justify-center {
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-justify-center {
   justify-content: center;
 }
 
-.justify-evenly {
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-justify-evenly {
   justify-content: space-evenly;
 }
 
